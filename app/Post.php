@@ -10,11 +10,11 @@ class Post extends Model
 
     public function user()
     {
-        $this->hasOne('App\User');
+        return $this->belongsTo('App\User');
     }
 
     public function topic()
     {
-        $this->belongsTo('App\Topic');
+        return $this->belongsTo('App\Topic');
     }
 }
