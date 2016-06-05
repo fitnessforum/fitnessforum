@@ -10,11 +10,11 @@ class Topic extends Model
 
     public function posts()
     {
-        $this->hasMany('posts');
+        $this->hasMany('App\Post');
     }
 
     public function categories()
     {
-        $this->belongsTo('categories');
+        $this->belongsTo('App\Category');
     }
 }
