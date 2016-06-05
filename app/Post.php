@@ -7,4 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     protected $table = 'posts';
+
+    public function user()
+    {
+        $this->hasOne('App\User');
+    }
+
+    public function topic()
+    {
+        $this->belongsTo('App\Topic');
+    }
 }
